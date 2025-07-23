@@ -1,6 +1,8 @@
 <div class="info" *ngIf="information$ | async as information">
+  <div class="info__absolute">כניסות לשאלון</div>
+
   <div class="info__containers" *ngFor="let item of information">
-    <p>{{ item.name }}</p>
-    <p>{{ item.number }}</p>
+    <p class="info__containers__title">{{ item.name }}</p>
+    <p class="info__containers__number">{{ item.number }}</p>
   </div>
 </div>
