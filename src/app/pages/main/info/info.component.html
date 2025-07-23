@@ -1,1 +1,6 @@
-<p>info works!</p>
+<div class="info" *ngIf="information$ | async as information">
+  <div class="info__containers" *ngFor="let item of information">
+    <p>{{ item.name }}</p>
+    <p>{{ item.number }}</p>
+  </div>
+</div>
