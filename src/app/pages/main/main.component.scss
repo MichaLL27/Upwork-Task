@@ -1,0 +1,15 @@
+.main {
+    height: 100%;
+    width: 100%;
+    background: #fff2cc;
+    padding-top: 56px;
+
+    &__title {
+       color: #2172AA;
+         font-size: 32px;
+         line-height: 36px;
+         font-style: bold; 
+         font-weight: 700;
+         text-align: center;
+    }
+}
