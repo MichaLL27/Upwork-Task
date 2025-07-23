@@ -8,6 +8,10 @@
     padding: 26px 30px;
     position: relative;
 
+    &__image {
+        cursor: pointer;
+    }
+
     &__absolute {
     position: absolute;
     top: -20px;
@@ -36,6 +40,7 @@
             height: 30px;
             border-radius: 14px;
             text-align: center;
+            cursor: pointer;
 
                 &--0 {
                 background-color: #E6F9FC;
@@ -51,44 +56,80 @@
                 background-color: #FBEAF3;
                 border: 2px solid #D75E9F;
                 }
+
+                &--3 {
+                background-color: gray;
+                border: 2px solid gray;
+                }
         }
     }
 
+&__table {
+  margin-top: 17px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
 
+  thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
 
-    &__table {
-        margin-top: 17px;
-        width: 100%;
-        display: table;
-        border-collapse: collapse;
-        border-spacing: 2px; 
+  &__body {
+    display: block;
+    max-height: 330px;
+    overflow-y: auto;
+    width: 100%;
+  }
 
-        &__first {
-            border: 1px solid black;
-            border-left: none;
-            border-right: none;
-            border-width: 1px 0px 1px 0px solid black;
-            background: #F4F4F4;
+  &__body tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
 
-            td {
-                 color: #2172AA;
-            font-style: bold;
-            font-weight: 700;
-            font-size: 20px;
-            padding: 6px;
-            }
+  &__first {
+    background: #F4F4F4;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 
-            td:nth-child(1) {
-            text-align: start;
-            }
-
-            td:nth-child(2),
-            td:nth-child(3) {
-            text-align: end;
-            }
-
-        }
+    th {
+      color: #2172AA;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 6px;
     }
+
+    th:nth-child(1) {
+      text-align: start;
+    }
+
+    th:nth-child(2),
+    th:nth-child(3) {
+      text-align: end;
+    }
+  }
+
+  &__body td {
+    padding: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__body td:nth-child(1) {
+    text-align: start;
+  }
+
+  &__body td:nth-child(2),
+  &__body td:nth-child(3) {
+    text-align: end;
+    color: #777777;
+  }
+}
 
 
  

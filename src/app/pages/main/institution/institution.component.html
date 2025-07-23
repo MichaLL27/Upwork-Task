@@ -1,19 +1,38 @@
 <div class="institution">
   <div class="institution__absolute">סטטוס מוסד</div>
 
-    <img src="images/download.svg" alt="download">
+    <img (click)="downloadTableAsExcel()" class="institution__image" src="images/download.svg" alt="download">
 
-    <div class="institution__filter" *ngIf="filter$ | async as filter">
-        <div class="institution__filter__containers"    [ngClass]="'institution__filter__containers--' + i"    *ngFor="let item of filter; let i = index">
-            <p>{{item.name}}</p>
-        </div>
+   <div class="institution__filter" *ngIf="filter$ | async as filter">
+  <div class="institution__filter__containers">
+    <p (click)="resetFilter()" style="cursor: pointer; font-weight: bold;">כל המוסדות</p>
+  </div>
+
+    <div 
+        class="institution__filter__containers"
+        [ngClass]="'institution__filter__containers--' + i"
+        *ngFor="let item of filter; let i = index"
+    >
+        <p (click)="filterItem(item.name)" style="cursor: pointer;">{{item.name}}</p>
+    </div>
     </div>
 
-    <table class="institution__table">
-        <tr class="institution__table__first">
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-    </table>
+
+<table class="institution__table" *ngIf="schoolsData$ | async as schools">
+  <thead>
+    <tr class="institution__table__first">
+      <th>סטטוס מילוי שאלון</th>
+      <th>שם המוסד</th>
+      <th>סמל מוסד</th>
+    </tr>
+  </thead>
+  <tbody class="institution__table__body">
+    <tr *ngFor="let school of schools">
+      <td [ngStyle]="getStatusStyle(school.formStatus)">{{ school.formStatus }}</td>
+      <td>{{ school.institutionName }}</td>
+      <td>{{ school.institutionSymbol }}</td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
