@@ -1,0 +1,60 @@
+.institution {
+    margin-top: 76px;
+    width: 729px;
+    height: 491px;
+    border-radius: 15px;
+    border: 2px solid black;
+    background: white;
+    padding: 26px 30px;
+    position: relative;
+
+    &__absolute {
+    position: absolute;
+    top: -20px;
+    right: 35px;
+    background-color: #0077c2; 
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid black;
+    }
+
+    &__filter {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        margin-top: 7px;
+
+        &__containers {
+            width: 106px;
+            height: 30px;
+            border-radius: 14px;
+            text-align: center;
+
+                &--0 {
+                background-color: #E6F9FC;
+                border: 2px solid #1EB8D0;
+                }
+
+                &--1 {
+                background-color: #FFF7E5;
+                border: 2px solid #FAB514;
+                }
+
+                &--2 {
+                background-color: #FBEAF3;
+                border: 2px solid #D75E9F;
+                }
+        }
+    }
+    &__table {
+        width: 100%;
+    }
+ 
+}
