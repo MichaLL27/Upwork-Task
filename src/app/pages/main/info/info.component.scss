@@ -50,15 +50,15 @@
         }
     }
 
-    &__containers:nth-child(1) .info__containers__number {
-        color: #1EB8D0;
-    }
+.info__containers:nth-child(2) .info__containers__number {
+  color: #1EB8D0;
+}
 
-    &__containers:nth-child(2) .info__containers__number {
-        color: #FAB514;
-    }
+.info__containers:nth-child(3) .info__containers__number {
+  color: #FAB514;
+}
 
-    &__containers:nth-child(3) .info__containers__number {
-        color: #D75E9F;
-    }
+.info__containers:nth-child(4) .info__containers__number {
+  color: #D75E9F;
+}
 }

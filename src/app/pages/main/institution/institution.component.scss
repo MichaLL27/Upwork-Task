@@ -81,7 +81,12 @@
     display: block;
     max-height: 330px;
     overflow-y: auto;
+    direction: rtl;
     width: 100%;
+
+      * {
+    direction: ltr;
+  }
   }
 
   &__body tr {
@@ -129,6 +134,22 @@
     text-align: end;
     color: #777777;
   }
+
+  &__body::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+&__body::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+&__body {
+  scrollbar-gutter: stable;
+}
+
 }
 
 
