@@ -53,8 +53,43 @@
                 }
         }
     }
+
+
+
     &__table {
+        margin-top: 17px;
         width: 100%;
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 2px; 
+
+        &__first {
+            border: 1px solid black;
+            border-left: none;
+            border-right: none;
+            border-width: 1px 0px 1px 0px solid black;
+            background: #F4F4F4;
+
+            td {
+                 color: #2172AA;
+            font-style: bold;
+            font-weight: 700;
+            font-size: 20px;
+            padding: 6px;
+            }
+
+            td:nth-child(1) {
+            text-align: start;
+            }
+
+            td:nth-child(2),
+            td:nth-child(3) {
+            text-align: end;
+            }
+
+        }
     }
+
+
  
 }
